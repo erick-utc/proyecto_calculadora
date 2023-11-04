@@ -68,7 +68,7 @@
             <div class="col-1"></div>
             <asp:Button ID="btnPow2" runat="server" Text="x^2" class="col-2 btn btn-light p-4 shadow-sm m-1" />
             <asp:Button ID="btnInverse" runat="server" Text="-/+" class="col-2 btn btn-light p-4 shadow-sm m-1" />
-            <asp:Button ID="btnCero" runat="server" Text="0" class="col-2 btn btn-light p-4 shadow-sm m-1" />
+            <asp:Button ID="btnCero" runat="server" Text="0" class="col-2 btn btn-light p-4 shadow-sm m-1" OnClick="btnCero_Click" />
             <asp:Button ID="btnPunto" runat="server" Text="." class="col-2 btn btn-light p-4 shadow-sm m-1" />
             <asp:Button ID="btnIgual" runat="server" Text="=" class="col-2 btn btn-dark p-4 shadow-sm m-1" />
             <div class="col-1"></div>

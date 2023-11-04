@@ -13,5 +13,10 @@ namespace Calculadora
         {
 
         }
+
+        protected void btnCero_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine(0);
+        }
     }
 }

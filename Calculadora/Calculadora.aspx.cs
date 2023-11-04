@@ -13,5 +13,10 @@ namespace Calculadora
         {
 
         }
+
+        protected void btnSuma_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("Suma");
+        }
     }
 }

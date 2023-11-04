@@ -61,7 +61,7 @@
             <asp:Button ID="btnUno" runat="server" Text="1" class="col-2 btn btn-light p-4 shadow-sm m-1" />
             <asp:Button ID="btnDos" runat="server" Text="2" class="col-2 btn btn-light p-4 shadow-sm m-1" />
             <asp:Button ID="btnTres" runat="server" Text="3" class="col-2 btn btn-light p-4 shadow-sm m-1" />
-            <asp:Button ID="btnSuma" runat="server" Text="+" class="col-2 btn btn-light p-4 shadow-sm m-1" />
+            <asp:Button ID="btnSuma" runat="server" Text="+" class="col-2 btn btn-light p-4 shadow-sm m-1" OnClick="btnSuma_Click" />
             <div class="col-1"></div>
         </div>
         <div class="row">

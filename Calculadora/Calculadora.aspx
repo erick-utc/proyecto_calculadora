@@ -45,16 +45,16 @@
             <asp:Button ID="btnClear" runat="server" Text="C" class="col-2 btn btn-light p-4 shadow-sm m-1" OnClick="btnClear_Click" />
             <asp:Button ID="bntDelete" runat="server" Text="Del" class="col-2 btn btn-light p-4 shadow-sm m-1" OnClick="bntDelete_Click" />
             <asp:Button ID="btnFactorial" runat="server" Text="x!" class="col-2 btn btn-light shadow-sm m-1" OnClick="btnFactorial_Click" />
-            <asp:Button ID="btnDivision" runat="server" Text="/" class="col-2 btn btn-light p-4 shadow-sm m-1" />
+            <asp:Button ID="btnDivision" runat="server" Text="/" class="col-2 btn btn-light p-4 shadow-sm m-1" OnClick="btnDivision_Click" />
             <div class="col-1"></div>
         </div>
         <div class="row">
             <div class="col-1"></div>
-            <asp:Button ID="btnpow" runat="server" Text="x^y" class="col-2 btn btn-light p-4 shadow-sm m-1" />
+            <asp:Button ID="btnpow" runat="server" Text="x^y" class="col-2 btn btn-light p-4 shadow-sm m-1" OnClick="btnpow_Click" />
             <asp:Button ID="btnSiete" runat="server" Text="7" class="col-2 btn btn-light p-4 shadow-sm m-1" OnClick="btnSiete_Click" />
             <asp:Button ID="btnOcho" runat="server" Text="8" class="col-2 btn btn-light p-4 shadow-sm m-1" OnClick="btnOcho_Click" />
             <asp:Button ID="btnNueve" runat="server" Text="9" class="col-2 btn btn-light p-4 shadow-sm m-1" OnClick="btnNueve_Click" />
-            <asp:Button ID="btnMultiplicacion" runat="server" Text="x" class="col-2 btn btn-light p-4 shadow-sm m-1" />
+            <asp:Button ID="btnMultiplicacion" runat="server" Text="x" class="col-2 btn btn-light p-4 shadow-sm m-1" OnClick="btnMultiplicacion_Click" />
             <div class="col-1"></div>
         </div>
         <div class="row">
@@ -63,7 +63,7 @@
             <asp:Button ID="btnCuatro" runat="server" Text="4" class="col-2 btn btn-light p-4 shadow-sm m-1" OnClick="btnCuatro_Click" />
             <asp:Button ID="btnCinco" runat="server" Text="5" class="col-2 btn btn-light p-4 shadow-sm m-1" OnClick="btnCinco_Click" />
             <asp:Button ID="btnSeis" runat="server" Text="6" class="col-2 btn btn-light p-4 shadow-sm m-1" OnClick="btnSeis_Click" />
-            <asp:Button ID="btnResta" runat="server" Text="-" class="col-2 btn btn-light p-4 shadow-sm m-1" />
+            <asp:Button ID="btnResta" runat="server" Text="-" class="col-2 btn btn-light p-4 shadow-sm m-1" OnClick="btnResta_Click" />
             <div class="col-1"></div>
         </div>
         <div class="row">

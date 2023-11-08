@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -27,7 +28,27 @@ namespace Calculadora
 
         protected void btnSuma_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("Suma");
+            if (txtNumero1.Text.Equals(String.Empty)) return;
+            if (!Global.operacionActiva)
+            {
+                Global.num1 = float.Parse(txtNumero1.Text);
+                txtNumero1.Text = String.Empty;
+                Global.operacionActual = Operaciones.SUMA;
+                lblResultado.Text = Global.num1.ToString() + Operaciones.SUMA;
+             //   Global.resultado = Operaciones.seleccionarOperacion(Global.operacionActual);
+             //   txtNumero1.Text = Global.resultado.ToString();
+                Global.operacionActiva = true;
+
+            }
+            else
+            {
+                Global.num2 = float.Parse(txtNumero1.Text);
+                txtNumero1.Text = String.Empty;
+                lblResultado.Text = lblResultado.Text + Global.num2.ToString() + "=";
+                Global.resultado = Operaciones.seleccionarOperacion(Global.operacionActual);
+                txtNumero1.Text = Global.resultado.ToString();
+                Global.operacionActiva = false;
+            }
         }
 
         protected void btnCero_Click(object sender, EventArgs e)
@@ -95,28 +116,22 @@ namespace Calculadora
 
         protected void bntDelete_Click(object sender, EventArgs e)
         {
-            if (txtNumero1.Text.Length > 1)
+            StringBuilder operacion = new StringBuilder(lblResultado.Text);
+            if (operacion.Length > 0)
             {
-                txtNumero1.Text = txtNumero1.Text.Substring(0, txtNumero1.Text.Length - 1);
+                // Borra el último carácter del StringBuilder
+                operacion.Remove(operacion.Length - 1, 1);
 
-
-
-
+                // Actualiza el texto del TextBox y del Label con el StringBuilder modificado
+               
+                lblResultado.Text = operacion.ToString();
             }
-            else
-            {
-                txtNumero1.Text = "0";
-
-
-
-            }
-
-
-        }
+          }
 
         protected void btnClear_Click(object sender, EventArgs e)
         {
             txtNumero1.Text = "0";
+            lblResultado.Text = "0";
         }
 
         protected void btnPunto_Click(object sender, EventArgs e)
@@ -305,6 +320,99 @@ namespace Calculadora
                 txtNumero1.Text = Global.resultado.ToString();
                 Global.operacionActiva = false;
             }
+        }
+
+        protected void btnResta_Click(object sender, EventArgs e)
+        {
+            if (txtNumero1.Text.Equals(String.Empty)) return;
+            if (!Global.operacionActiva)
+            {
+                Global.num1 = float.Parse(txtNumero1.Text);
+                txtNumero1.Text = String.Empty;
+                Global.operacionActual = Operaciones.RESTA;
+                lblResultado.Text = Global.num1.ToString() + Operaciones.RESTA;
+                //   Global.resultado = Operaciones.seleccionarOperacion(Global.operacionActual);
+                //   txtNumero1.Text = Global.resultado.ToString();
+                Global.operacionActiva = true;
+
+            }
+            else
+            {
+                Global.num2 = float.Parse(txtNumero1.Text);
+                txtNumero1.Text = String.Empty;
+                lblResultado.Text = lblResultado.Text + Global.num2.ToString() + "=";
+                Global.resultado = Operaciones.seleccionarOperacion(Global.operacionActual);
+                txtNumero1.Text = Global.resultado.ToString();
+                Global.operacionActiva = false;
+            }
+        }
+
+        protected void btnMultiplicacion_Click(object sender, EventArgs e)
+        {
+            if (txtNumero1.Text.Equals(String.Empty)) return;
+            if (!Global.operacionActiva)
+            {
+                Global.num1 = float.Parse(txtNumero1.Text);
+                txtNumero1.Text = String.Empty;
+                Global.operacionActual = Operaciones.MULTIPLICACION;
+                lblResultado.Text = Global.num1.ToString() + Operaciones.MULTIPLICACION;
+                //   Global.resultado = Operaciones.seleccionarOperacion(Global.operacionActual);
+                //   txtNumero1.Text = Global.resultado.ToString();
+                Global.operacionActiva = true;
+
+            }
+            else
+            {
+                Global.num2 = float.Parse(txtNumero1.Text);
+                txtNumero1.Text = String.Empty;
+                lblResultado.Text = lblResultado.Text + Global.num2.ToString() + "=";
+                Global.resultado = Operaciones.seleccionarOperacion(Global.operacionActual);
+                txtNumero1.Text = Global.resultado.ToString();
+                Global.operacionActiva = false;
+            }
+        }
+
+        protected void btnDivision_Click(object sender, EventArgs e)
+        {
+            if (txtNumero1.Text.Equals(String.Empty)) return;
+            if (!Global.operacionActiva)
+            {
+                Global.num1 = float.Parse(txtNumero1.Text);
+                txtNumero1.Text = String.Empty;
+                Global.operacionActual = Operaciones.DIVISION;
+                lblResultado.Text = Global.num1.ToString() + Operaciones.DIVISION;
+                //   Global.resultado = Operaciones.seleccionarOperacion(Global.operacionActual);
+                //   txtNumero1.Text = Global.resultado.ToString();
+                Global.operacionActiva = true;
+
+            }
+            else
+            {
+                Global.num2 = float.Parse(txtNumero1.Text);
+                txtNumero1.Text = String.Empty;
+                lblResultado.Text = lblResultado.Text + Global.num2.ToString() + "=";
+                Global.resultado = Operaciones.seleccionarOperacion(Global.operacionActual);
+                txtNumero1.Text = Global.resultado.ToString();
+                Global.operacionActiva = false;
+            }
+        }
+
+        protected void btnpow_Click(object sender, EventArgs e)
+        {
+
+            double baseNumber = Convert.ToDouble(txtNumero1.Text);
+            double exponente = Convert.ToDouble(txtNumero1.Text);
+
+            // Calcular x^y
+            double resultado = Math.Pow(baseNumber, exponente);
+
+            // Mostrar el resultado en un TextBox o Label
+            txtNumero1.Text = resultado.ToString();
+
+
+
+
+
         }
     }
 }

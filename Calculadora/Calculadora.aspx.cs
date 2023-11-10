@@ -48,12 +48,22 @@ namespace Calculadora
                 Global.resultado = Operaciones.seleccionarOperacion(Global.operacionActual);
                 txtNumero1.Text = Global.resultado.ToString();
                 Global.operacionActiva = false;
+                Global.mostrandoResultado = true;
             }
         }
 
         protected void btnCero_Click(object sender, EventArgs e)
         {
+            if (Global.mostrandoResultado)
+            {
+                txtNumero1.Text = String.Empty;
+                lblResultado.Text = String.Empty;
+                Global.mostrandoResultado = false;
 
+
+
+            }
+         
             var boton = ((Button)sender);
             agregarNumero(boton.Text);
 
@@ -61,55 +71,147 @@ namespace Calculadora
 
         protected void btnUno_Click(object sender, EventArgs e)
         {
+            if (Global.mostrandoResultado)
+            {
+                txtNumero1.Text = String.Empty;
+                lblResultado.Text = String.Empty;
+                Global.mostrandoResultado = false;
+
+
+
+            }
+
+
             var boton = ((Button)sender);
             agregarNumero(boton.Text);
         }
 
         protected void btnDos_Click(object sender, EventArgs e)
         {
+            if (Global.mostrandoResultado)
+            {
+                txtNumero1.Text = String.Empty;
+                lblResultado.Text = String.Empty;
+                Global.mostrandoResultado = false;
+
+
+
+            }
+
+
             var boton = ((Button)sender);
             agregarNumero(boton.Text);
         }
 
         protected void btnTres_Click(object sender, EventArgs e)
         {
+
+            if (Global.mostrandoResultado)
+            {
+                txtNumero1.Text = String.Empty;
+                lblResultado.Text = String.Empty;
+                Global.mostrandoResultado = false;
+
+
+
+            }
             var boton = ((Button)sender);
             agregarNumero(boton.Text);
         }
 
         protected void btnCuatro_Click(object sender, EventArgs e)
         {
+            if (Global.mostrandoResultado)
+            {
+                txtNumero1.Text = String.Empty;
+                lblResultado.Text = String.Empty;
+                Global.mostrandoResultado = false;
+
+
+
+            }
+
             var boton = ((Button)sender);
             agregarNumero(boton.Text);
         }
 
         protected void btnCinco_Click(object sender, EventArgs e)
         {
+            if (Global.mostrandoResultado)
+            {
+                txtNumero1.Text = String.Empty;
+                lblResultado.Text = String.Empty;
+                Global.mostrandoResultado = false;
 
+
+
+            }
             var boton = ((Button)sender);
             agregarNumero(boton.Text);
+
+           
+
+
+
+
         }
 
         protected void btnSeis_Click(object sender, EventArgs e)
         {
+            if (Global.mostrandoResultado)
+            {
+                txtNumero1.Text = String.Empty;
+                lblResultado.Text = String.Empty;
+                Global.mostrandoResultado = false;
+
+
+
+            }
             var boton = ((Button)sender);
             agregarNumero(boton.Text);
         }
 
         protected void btnSiete_Click(object sender, EventArgs e)
         {
+            if (Global.mostrandoResultado)
+            {
+                txtNumero1.Text = String.Empty;
+                lblResultado.Text = String.Empty;
+                Global.mostrandoResultado = false;
+
+
+
+            }
             var boton = ((Button)sender);
             agregarNumero(boton.Text);
         }
 
         protected void btnOcho_Click(object sender, EventArgs e)
         {
+            if (Global.mostrandoResultado)
+            {
+                txtNumero1.Text = String.Empty;
+                lblResultado.Text = String.Empty;
+                Global.mostrandoResultado = false;
+
+
+
+            }
             var boton = ((Button)sender);
             agregarNumero(boton.Text);
         }
 
         protected void btnNueve_Click(object sender, EventArgs e)
         {
+            if (Global.mostrandoResultado)
+            {
+                txtNumero1.Text = String.Empty;
+                lblResultado.Text = String.Empty;
+                Global.mostrandoResultado = false;
+
+
+
+            }
             var boton = ((Button)sender);
             agregarNumero(boton.Text);
         }
@@ -136,6 +238,19 @@ namespace Calculadora
 
         protected void btnPunto_Click(object sender, EventArgs e)
         {
+
+            if (Global.mostrandoResultado)
+            {
+                txtNumero1.Text = String.Empty;
+                lblResultado.Text = String.Empty;
+                Global.mostrandoResultado = false;
+
+
+
+            }
+
+
+
             if (!txtNumero1.Text.Contains("."))
             {
                 txtNumero1.Text += ".";
@@ -169,6 +284,7 @@ namespace Calculadora
                 Global.resultado = Operaciones.seleccionarOperacion(Global.operacionActual);
                 txtNumero1.Text = Global.resultado.ToString();
                 Global.operacionActiva = false;
+                Global.mostrandoResultado = true;
             }
         }
 
@@ -184,6 +300,7 @@ namespace Calculadora
                 Global.resultado = Operaciones.seleccionarOperacion(Global.operacionActual);
                 txtNumero1.Text = Global.resultado.ToString();
                 Global.operacionActiva = false;
+                Global.mostrandoResultado = true;
 
             }
             else
@@ -194,6 +311,7 @@ namespace Calculadora
                 Global.resultado = Operaciones.seleccionarOperacion(Global.operacionActual);
                 txtNumero1.Text = Global.resultado.ToString();
                 Global.operacionActiva = false;
+                Global.mostrandoResultado = true;
             }
         }
 
@@ -209,7 +327,7 @@ namespace Calculadora
                 Global.resultado = Operaciones.seleccionarOperacion(Global.operacionActual);
                 txtNumero1.Text = Global.resultado.ToString();
                 Global.operacionActiva = false;
-
+                Global.mostrandoResultado = true;
             }
             else
             {
@@ -219,6 +337,8 @@ namespace Calculadora
                 Global.resultado = Operaciones.seleccionarOperacion(Global.operacionActual);
                 txtNumero1.Text = Global.resultado.ToString();
                 Global.operacionActiva = false;
+                Global.mostrandoResultado = true;
+
             }
         }
 
@@ -234,6 +354,7 @@ namespace Calculadora
                 Global.resultado = Operaciones.seleccionarOperacion(Global.operacionActual);
                 txtNumero1.Text = Global.resultado.ToString();
                 Global.operacionActiva = false;
+                Global.mostrandoResultado = true;
 
             }
             else
@@ -244,6 +365,8 @@ namespace Calculadora
                 Global.resultado = Operaciones.seleccionarOperacion(Global.operacionActual);
                 txtNumero1.Text = Global.resultado.ToString();
                 Global.operacionActiva = false;
+                Global.mostrandoResultado = true;
+
             }
         }
 
@@ -259,6 +382,7 @@ namespace Calculadora
                 Global.resultado = Operaciones.seleccionarOperacion(Global.operacionActual);
                 txtNumero1.Text = Global.resultado.ToString();
                 Global.operacionActiva = false;
+                Global.mostrandoResultado = true;
 
             }
             else
@@ -269,6 +393,7 @@ namespace Calculadora
                 Global.resultado = Operaciones.seleccionarOperacion(Global.operacionActual);
                 txtNumero1.Text = Global.resultado.ToString();
                 Global.operacionActiva = false;
+                Global.mostrandoResultado = true;
             }
         }
 
@@ -284,6 +409,7 @@ namespace Calculadora
                 Global.resultado = Operaciones.seleccionarOperacion(Global.operacionActual);
                 txtNumero1.Text = Global.resultado.ToString();
                 Global.operacionActiva = false;
+                Global.mostrandoResultado = true;
 
             }
             else
@@ -294,6 +420,7 @@ namespace Calculadora
                 Global.resultado = Operaciones.seleccionarOperacion(Global.operacionActual);
                 txtNumero1.Text = Global.resultado.ToString();
                 Global.operacionActiva = false;
+                Global.mostrandoResultado = true;
             }
         }
 
@@ -309,7 +436,7 @@ namespace Calculadora
                 Global.resultado = Operaciones.seleccionarOperacion(Global.operacionActual);
                 txtNumero1.Text = Global.resultado.ToString();
                 Global.operacionActiva = false;
-
+                Global.mostrandoResultado = true;
             }
             else
             {
@@ -319,6 +446,7 @@ namespace Calculadora
                 Global.resultado = Operaciones.seleccionarOperacion(Global.operacionActual);
                 txtNumero1.Text = Global.resultado.ToString();
                 Global.operacionActiva = false;
+                Global.mostrandoResultado = true;
             }
         }
 
@@ -344,6 +472,7 @@ namespace Calculadora
                 Global.resultado = Operaciones.seleccionarOperacion(Global.operacionActual);
                 txtNumero1.Text = Global.resultado.ToString();
                 Global.operacionActiva = false;
+                Global.mostrandoResultado = true;
             }
         }
 
@@ -369,6 +498,7 @@ namespace Calculadora
                 Global.resultado = Operaciones.seleccionarOperacion(Global.operacionActual);
                 txtNumero1.Text = Global.resultado.ToString();
                 Global.operacionActiva = false;
+                Global.mostrandoResultado = true;
             }
         }
 
@@ -394,24 +524,45 @@ namespace Calculadora
                 Global.resultado = Operaciones.seleccionarOperacion(Global.operacionActual);
                 txtNumero1.Text = Global.resultado.ToString();
                 Global.operacionActiva = false;
+                Global.mostrandoResultado = true;
             }
         }
 
         protected void btnpow_Click(object sender, EventArgs e)
         {
+            if (txtNumero1.Text.Equals(String.Empty)) return;
+            if (!Global.operacionActiva)
+            {
+                Global.num1 = float.Parse(txtNumero1.Text);
+                txtNumero1.Text = String.Empty;
+                Global.operacionActual = Operaciones.POW;
+                lblResultado.Text = Global.num1.ToString() + Operaciones.POW;
+                //   Global.resultado = Operaciones.seleccionarOperacion(Global.operacionActual);
+                //   txtNumero1.Text = Global.resultado.ToString();
+                Global.operacionActiva = true;
 
-            double baseNumber = Convert.ToDouble(txtNumero1.Text);
-            double exponente = Convert.ToDouble(txtNumero1.Text);
+            }
+            else
+            {
+                Global.num2 = float.Parse(txtNumero1.Text);
+                txtNumero1.Text = String.Empty;
+                lblResultado.Text = lblResultado.Text + Global.num2.ToString() + "=";
+                Global.resultado = Operaciones.seleccionarOperacion(Global.operacionActual);
+                txtNumero1.Text = Global.resultado.ToString();
+                Global.operacionActiva = false;
+                Global.mostrandoResultado = true;
+            }
 
-            // Calcular x^y
-            double resultado = Math.Pow(baseNumber, exponente);
-
-            // Mostrar el resultado en un TextBox o Label
-            txtNumero1.Text = resultado.ToString();
 
 
 
 
+
+        }
+
+        protected void txtNumero1_TextChanged(object sender, EventArgs e)
+        {
+           
 
         }
     }

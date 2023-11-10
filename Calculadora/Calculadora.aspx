@@ -35,7 +35,7 @@
         </div>
         <div class="row">
             <div class="col-2"></div>
-            <asp:TextBox ID="txtNumero1" runat="server" class="col-8 text-right"></asp:TextBox>
+            <asp:TextBox ID="txtNumero1" runat="server" class="col-8 text-right" OnTextChanged="txtNumero1_TextChanged"></asp:TextBox>
             <div class="col-2"></div>
         </div>
         

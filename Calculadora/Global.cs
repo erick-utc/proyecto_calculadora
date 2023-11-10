@@ -14,5 +14,7 @@ namespace Calculadora
         public static bool operacionActiva;
 
         public static string operacionActual;
+
+        public static bool mostrandoResultado;
     }
 }
